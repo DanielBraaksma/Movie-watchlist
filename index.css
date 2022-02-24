@@ -1,6 +1,5 @@
-html, body {
+body {
     margin: 0;
-    padding: 0;
 }
 
 header {
@@ -26,7 +25,8 @@ nav a {
 
 .searchbar {
     margin: 0 auto;
-    width: 500px;
+    min-width: 200px;
+    max-width: 525px;
     text-align: center;
     border: 1px solid grey;
     padding: .75em;
@@ -34,7 +34,7 @@ nav a {
     top: -25px;
     z-index: 2;
     background-color: #fff;
-    border-radius: 10px
+    border-radius: 10px;
 }
 
 .searchbar button,
@@ -46,6 +46,22 @@ nav a {
     width: 80%;
 }
 
-.search-result-content {
-    max-width: 600px;
+#search-result-content {
+    margin: 2em 2em;
+    padding: 3em;
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+
+@media (max-width: 500px) {
+    .searchbar {
+        max-width: 80%;
+    }
+
+    #search-result-content {
+        margin: 0 auto;
+        flex-direction: column;
+    }
 }
