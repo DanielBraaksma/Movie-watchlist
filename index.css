@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 0;
+    padding: 2em;
+    background-color: grey;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    z-index: 1;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+   text-decoration: none;
+   color: #fff;
+}
+
+.searchbar {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+    border: 1px solid grey;
+    padding: .75em;
+    position: relative;
+    top: -25px;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 10px
+}
+
+.searchbar button,
+.searchbar input {
+    height: 2em;
+}
+
+#site-search {
+    width: 80%;
+}
+
+.search-result-content {
+    max-width: 600px;
+}
