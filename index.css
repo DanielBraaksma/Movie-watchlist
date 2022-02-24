@@ -65,3 +65,42 @@ nav a {
         flex-direction: column;
     }
 }
+
+
+.movie-container {
+    display: flex;
+    margin: 1em;
+    text-align: center;
+}
+
+.movie-container img {
+    width: 275px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+.movie-container .movie-info {
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-info a {
+    box-sizing: border-box;
+    width: 117px;
+    height: 30px;
+    align-self: center;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-bottom: 1em;
+}
+
+.movie-info button {
+    align-self: center;
+}
+
+#watchlist {
+    width: fit-content;
+    padding: 5px 10px;
+}
