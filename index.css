@@ -1,12 +1,13 @@
 body {
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
+    background-color: grey;
 }
 
 header {
     margin: 0;
     padding: 2em;
-    background-color: grey;
+    background-color: rgba(0, 0, 0, 0.582);
     height: 30vh;
     display: flex;
     justify-content: space-between;
@@ -15,8 +16,21 @@ header {
     z-index: 1;
 }
 
+h1 {
+    font-size: 3rem;
+}
+
+h3 {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 5em;
+    /* text-align: center; */
+    color: #fff;
+}
+
 nav li {
     list-style: none;
+    font-size: 2rem;
 }
 
 nav a {
