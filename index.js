@@ -1,10 +1,16 @@
-
-
 let searchBar = document.getElementById("site-search")
 let searchResults = []
 let searchContainer = document.getElementById("search-result-content")
+let myWatchlist = JSON.parse(localStorage.getItem("localStorageList"))
 
-let myWatchlist = []
+if(!myWatchlist){
+myWatchlist = []
+}
+// } else {
+//     myWatchlist = JSON.parse(localStorage.getItem("localStorageList"))
+// }
+
+
 
 const searchBtn = document.getElementById("search-btn")
 
@@ -44,6 +50,7 @@ function addToWatchList (i){
     myWatchlist.push(searchResults[i])
     console.log(myWatchlist)
     localStorage.setItem("localStorageList", JSON.stringify(myWatchlist));
+    renderWatchList()
 
 
     //TRY JUST PUSHING THE PARENT ELEMENT AND all its children to a new array
