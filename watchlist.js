@@ -1,18 +1,18 @@
 
 let watchListContainer = document.getElementById("watch-container")
 let storedList = JSON.parse(localStorage.getItem("localStorageList"))
-let html = ""
+// let html;
 console.log(watchListContainer)
 
 function renderWatchList (){
+    let html = ""
     // let storedList = JSON.parse(localStorage.getItem("localStorageList"))
     console.log(storedList)
     // console.log(typeof storedList)
 
     storedList.forEach((movie, i) =>{
 
-
-        html+= `<div class="movie-container">
+        html += `<div class="movie-container">
                     <img src="${movie.Poster}">
                     <div class="movie-info">
                         <p id="${movie.Title}">Title: ${movie.Title}</p>
@@ -23,12 +23,13 @@ function renderWatchList (){
                     </div>
                 </div>`
 
-        i++
     })
     console.log(html)
-
+    watchListContainer.innerHTML = html;
 
 }
+
+
 
 function removeWatchList(i){
     storedList.splice(i, 1)
@@ -36,6 +37,5 @@ function removeWatchList(i){
     renderWatchList()
 }
 
-renderWatchList()
 
-watchListContainer.innerHTML = html;
+renderWatchList()
