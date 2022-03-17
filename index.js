@@ -1,11 +1,10 @@
+
+
 let searchBar = document.getElementById("site-search")
 let searchResults = []
 let searchContainer = document.getElementById("search-result-content")
+
 let myWatchlist = []
-
-
-
-
 
 const searchBtn = document.getElementById("search-btn")
 
@@ -44,18 +43,45 @@ function renderSearch () {
 function addToWatchList (i){
     myWatchlist.push(searchResults[i])
     console.log(myWatchlist)
-    if (localStorage.getItem('myWatchList') === null) {
-        localStorage.setItem("myWatchList", JSON.stringify(myWatchlist));
-    renderWatchList()
-    } else {
+    localStorage.setItem("localStorageList", JSON.stringify(myWatchlist));
 
-    }
+
+    //TRY JUST PUSHING THE PARENT ELEMENT AND all its children to a new array
+        //THEN JOIN THE ARRAY AND SET IT TO HTML IN THE RENDER WATCHLIST FUNC.
+        // SOMEWHERE NEED TO SAVE IT TO LOCAL STORAGE AND DEAL WITH THAT.!
 }
 
+renderWatchList()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // function renderWatchList() {
-//     let retrievedData = localStorage.getItem("watchlist");
-//     let htmlarray = JSON.parse(retrievedData)
-//     console.log(htmlarray)
+//     let retrievedData = localStorage.getItem.watchlist;
+//     console.log(retrievedData)
+//     // let htmlarray = JSON.parse(retrievedData)
+//     // console.log(htmlarray)
+//     console.log("in render watchlist fx")
 //     html = ""
 //     myWatchlist.forEach((movie, i)=>{
 //         html+= `<div class="movie-container">
