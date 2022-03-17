@@ -50,7 +50,7 @@ function addToWatchList (i){
     myWatchlist.push(searchResults[i])
     console.log(myWatchlist)
     localStorage.setItem("localStorageList", JSON.stringify(myWatchlist));
-    renderWatchList()
+    // renderWatchList()
 
 
     //TRY JUST PUSHING THE PARENT ELEMENT AND all its children to a new array
@@ -58,7 +58,7 @@ function addToWatchList (i){
         // SOMEWHERE NEED TO SAVE IT TO LOCAL STORAGE AND DEAL WITH THAT.!
 }
 
-renderWatchList()
+// renderWatchList()
 
 
 
