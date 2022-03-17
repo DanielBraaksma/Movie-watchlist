@@ -10,7 +10,7 @@ myWatchlist = []
 const searchBtn = document.getElementById("search-btn")
 
 searchBtn.addEventListener("click", function(){
-    fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=ad56d582&s=${searchBar.value}`)
+    fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=ad56d582&s=${searchBar.value}`)
     .then(res => res.json())
     .then(data => {
         searchResults = data.Search
