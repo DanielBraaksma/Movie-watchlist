@@ -1,8 +1,11 @@
-
 let watchListContainer = document.getElementById("watch-container")
+
 let storedList = JSON.parse(localStorage.getItem("localStorageList"))
-// let html;
+
 console.log(watchListContainer)
+
+
+
 
 function renderWatchList (){
     let html = ""
@@ -39,3 +42,7 @@ function removeWatchList(i){
 
 
 renderWatchList()
+
+if (!storedList.length) {
+    watchListContainer.innerHTML = `<h3>Try searching for your next Show!</h3>`
+}
