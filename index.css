@@ -129,7 +129,13 @@ nav a {
     border-radius: 3px;
 }
 
-#watchlist {
+#watch-container {
     width: fit-content;
     padding: 5px 10px;
+}
+
+#watch-container {
+    margin: 0 auto;
+    /* width: fit-content;
+    padding: 5px 10px; */
 }
