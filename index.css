@@ -38,7 +38,7 @@ nav a {
    color: #fff;
 }
 
-.searchbar {
+form {
     margin: 0 auto;
     min-width: 200px;
     max-width: 525px;
@@ -53,14 +53,19 @@ nav a {
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
-.searchbar button,
-.searchbar input {
+form button,
+form input {
     height: 2em;
 }
 
-#site-search {
+#search-input {
     width: 80%;
 }
+
+/* form {
+    padding: 1em;
+    margin: 1em;
+} */
 
 #search-result-content {
     margin: 2em 2em;
@@ -139,4 +144,3 @@ nav a {
     /* width: fit-content;
     padding: 5px 10px; */
 }
-

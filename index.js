@@ -1,4 +1,5 @@
-let searchBar = document.getElementById("site-search")
+let searchBarForm = document.getElementById("search-bar-form")
+let searchInput = document.getElementById("search-input")
 let searchResults = []
 let searchContainer = document.getElementById("search-result-content")
 let myWatchlist = JSON.parse(localStorage.getItem("localStorageList"))
@@ -7,12 +8,14 @@ if(!myWatchlist){
 myWatchlist = []
 }
 
-const searchBtn = document.getElementById("search-btn")
+// const searchBtn = document.getElementById("search-btn")
 
-searchBtn.addEventListener("click", function(){
-    fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=ad56d582&s=${searchBar.value}`)
+searchBarForm.addEventListener("submit", function(e){
+    e.preventDefault()
+    fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=ad56d582&s=${searchInput.value}`)
     .then(res => res.json())
     .then(data => {
+        console.log(data);
         searchResults = data.Search
         renderSearch ();
     })
@@ -40,7 +43,8 @@ function renderSearch () {
 
 function addToWatchList (i){
     myWatchlist.push(searchResults[i])
-    // console.log(myWatchlist)
+    document.getElementById(i).disabled = true;
+    console.log(searchResults[i])
     localStorage.setItem("localStorageList", JSON.stringify(myWatchlist));
 }
 
