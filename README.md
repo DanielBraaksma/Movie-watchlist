@@ -5,7 +5,7 @@ This was a challenge in an online course I took covering API's. There were no tu
 
 We were given an image and a description of what the website should do.
 
-The code is 100% written by myself and took a significant amount of searching for documentation and fisxing bugs. I am glad I challenged myself to complete this as I feel a lot more confident in working with API's and their data.
+The code is 100% written by myself and took a significant amount of searching for documentation and fixing bugs. I am glad I challenged myself to complete this as I feel a lot more confident in working with API's and their data.
 
 I built this with an emphasis on functionality to practice calls to RESTful API's and handling the response from those calls.
 
